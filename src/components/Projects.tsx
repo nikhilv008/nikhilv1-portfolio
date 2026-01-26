@@ -1,136 +1,149 @@
-import { ExternalLink, Github, Folder } from 'lucide-react';
+import { useEffect, useRef } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 
 const projects = [
   {
-    title: 'E-Commerce Dashboard',
-    description: 'A modern admin dashboard for managing products, orders, and analytics with real-time data visualization.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-    tags: ['React', 'Tailwind CSS', 'Chart.js'],
-    liveUrl: '#',
-    githubUrl: '#',
+    title: 'Seone',
+    category: 'Web Design',
+    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop',
+    size: 'large',
   },
   {
-    title: 'Task Management App',
-    description: 'A clean and intuitive task manager with drag-and-drop functionality, categories, and progress tracking.',
-    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&h=400&fit=crop',
-    tags: ['React', 'JavaScript', 'LocalStorage'],
-    liveUrl: '#',
-    githubUrl: '#',
+    title: 'BeServer',
+    category: 'Brand Identity',
+    image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&h=400&fit=crop',
+    size: 'small',
   },
   {
-    title: 'Weather Application',
-    description: 'Beautiful weather app with location-based forecasts, animated backgrounds, and detailed weather metrics.',
-    image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',
-    tags: ['React', 'API Integration', 'CSS'],
-    liveUrl: '#',
-    githubUrl: '#',
+    title: 'Energetic Tumbler',
+    category: 'Product Design',
+    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop',
+    size: 'small',
   },
   {
-    title: 'Portfolio Template',
-    description: 'A customizable portfolio template with smooth animations, dark mode support, and contact form integration.',
-    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop',
-    tags: ['React', 'Framer Motion', 'Tailwind'],
-    liveUrl: '#',
-    githubUrl: '#',
+    title: 'Luminous',
+    category: 'UI/UX Design',
+    image: 'https://images.unsplash.com/photo-1545235617-9465d2a55698?w=600&h=800&fit=crop',
+    size: 'tall',
+  },
+  {
+    title: 'Artisan',
+    category: 'Web Application',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+    size: 'wide',
   },
 ];
 
 const Projects = () => {
-  return (
-    <section id="projects" className="py-24 relative overflow-hidden">
-      {/* Decorative blob */}
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-secondary/20 to-primary/10 blob blur-3xl opacity-50" />
+  const sectionRef = useRef<HTMLElement>(null);
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">My Work</span>
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = sectionRef.current?.querySelectorAll('.reveal');
+    elements?.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section ref={sectionRef} id="works" className="py-24">
+      <div className="container mx-auto px-6">
+        {/* Section Header */}
+        <div className="reveal flex flex-col md:flex-row md:items-end md:justify-between mb-12">
+          <div>
+            <span className="section-label">Portfolio</span>
             <h2 className="section-heading">
-              Featured{' '}
-              <span className="gradient-text">Projects</span>
+              Featured <span className="text-primary">Works</span>
             </h2>
-            <p className="section-subheading mt-4">
-              Here are some of my recent projects that showcase my skills and passion for web development.
-            </p>
+          </div>
+          <a 
+            href="#" 
+            className="btn-outline mt-6 md:mt-0 inline-flex items-center gap-2 w-fit"
+          >
+            View All Projects
+            <ArrowUpRight size={16} />
+          </a>
+        </div>
+
+        {/* Projects Grid - Asymmetrical Bento Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Large featured project */}
+          <div className="reveal lg:col-span-2 lg:row-span-2">
+            <div className="project-card h-full group">
+              <div className="relative h-full min-h-[400px] lg:min-h-[500px] overflow-hidden rounded-2xl">
+                <img 
+                  src={projects[0].image}
+                  alt={projects[0].title}
+                  className="w-full h-full object-cover transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <span className="text-primary text-sm font-medium mb-2 block">{projects[0].category}</span>
+                  <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">{projects[0].title}</h3>
+                  <span className="inline-flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity text-primary">
+                    View Project <ArrowUpRight size={16} />
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={project.title}
-                className="project-card group gradient-border rounded-2xl overflow-hidden bg-card"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {/* Project Image */}
-                <div className="relative h-56 overflow-hidden">
-                  <img
+          {/* Smaller projects */}
+          {projects.slice(1, 4).map((project, index) => (
+            <div 
+              key={project.title}
+              className={`reveal ${index === 2 ? 'lg:row-span-1' : ''}`}
+              style={{ animationDelay: `${(index + 1) * 0.1}s` }}
+            >
+              <div className="project-card group h-full">
+                <div className="relative h-64 overflow-hidden rounded-2xl">
+                  <img 
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
-
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-primary/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <a
-                      href={project.liveUrl}
-                      className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform"
-                      title="View Live"
-                    >
-                      <ExternalLink className="w-5 h-5 text-primary" />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform"
-                      title="View Code"
-                    >
-                      <Github className="w-5 h-5 text-primary" />
-                    </a>
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <span className="text-primary text-xs font-medium mb-1 block">{project.category}</span>
+                    <h3 className="text-xl font-display font-bold">{project.title}</h3>
                   </div>
-                </div>
-
-                {/* Project Content */}
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-xl font-display font-bold text-foreground group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                    <Folder className="w-5 h-5 text-muted-foreground" />
-                  </div>
-
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-primary/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="flex items-center gap-2 text-primary-foreground font-semibold">
+                      View Project <ArrowUpRight size={20} />
+                    </span>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
 
-          {/* View All Button */}
-          <div className="text-center mt-12">
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
-            >
-              <Github size={20} />
-              View More on GitHub
-            </a>
+          {/* Wide project */}
+          <div className="reveal lg:col-span-3" style={{ animationDelay: '0.4s' }}>
+            <div className="project-card group">
+              <div className="relative h-64 md:h-80 overflow-hidden rounded-2xl">
+                <img 
+                  src={projects[4].image}
+                  alt={projects[4].title}
+                  className="w-full h-full object-cover transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <span className="text-primary text-sm font-medium mb-2 block">{projects[4].category}</span>
+                  <h3 className="text-2xl md:text-3xl font-display font-bold">{projects[4].title}</h3>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
