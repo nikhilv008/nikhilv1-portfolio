@@ -48,14 +48,14 @@ const Stats = () => {
 
           {/* Experience Stat */}
           <div className="reveal delay-100 bento-card flex flex-col justify-center items-center text-center min-h-[200px]">
-            <span className="stat-number">14</span>
-            <p className="text-muted-foreground mt-2">Years of Experience</p>
+            <span className="stat-number">fresher</span>
+            <p className="text-muted-foreground mt-2">Eager to Explore</p>
           </div>
 
           {/* Clients Stat */}
           <div className="reveal delay-200 bento-card flex flex-col justify-center items-center text-center min-h-[200px]">
-            <span className="stat-number">187</span>
-            <p className="text-muted-foreground mt-2">Satisfied Clients</p>
+            <span className="stat-number">2</span>
+            <p className="text-muted-foreground mt-2">internships done</p>
           </div>
         </div>
       </div>

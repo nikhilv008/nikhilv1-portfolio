@@ -30,9 +30,9 @@ const Hero = () => {
           {/* Left side - Name */}
           <div className="reveal">
             <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold leading-[0.9] tracking-tight">
-              <span className="yellow-underline">Carlos</span>
+              <span className="yellow-underline">Nikhil</span>
               <br />
-              Mendoza
+              V
             </h1>
           </div>
 
@@ -40,7 +40,7 @@ const Hero = () => {
           <div className="reveal delay-200 lg:pt-8">
             <span className="section-label">Introduction</span>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-              I'm a multi-disciplinary designer and developer based in San Francisco, 
+              I'm a multi-disciplinary designer and developer based in India, 
               crafting premium digital experiences that blend aesthetics with functionality. 
               I believe in the power of thoughtful design to transform businesses.
             </p>
@@ -89,7 +89,7 @@ const Hero = () => {
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden border-2 border-border">
                 <img 
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-                  alt="Carlos Mendoza"
+                  alt="Nikhil V"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
               </div>
@@ -103,8 +103,8 @@ const Hero = () => {
           {/* Quick stat */}
           <div className="reveal delay-500 order-3 text-right">
             <span className="section-label">Based In</span>
-            <p className="text-2xl font-display font-semibold">San Francisco, CA</p>
-            <p className="text-muted-foreground">UTC -8</p>
+            <p className="text-2xl font-display font-semibold">Chennai, TamilNadu</p>
+            <p className="text-muted-foreground">India</p>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
           <a href="#home" className="text-2xl font-display font-bold">
-            CM<span className="text-primary">.</span>
+            Nikhil V<span className="text-primary">.dev</span>
           </a>
 
           {/* Social Links */}
@@ -39,7 +39,7 @@ const Footer = () => {
           {/* Copyright & Back to Top */}
           <div className="flex items-center gap-6">
             <p className="text-muted-foreground text-sm">
-              © {currentYear} Carlos Mendoza. All rights reserved.
+              © {currentYear} Nikhil V. All rights reserved.
             </p>
             <button
               onClick={scrollToTop}

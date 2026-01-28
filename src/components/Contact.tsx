@@ -53,7 +53,7 @@ const Contact = () => {
   const socialLinks = [
     { icon: Instagram, href: '#', label: 'Instagram' },
     { icon: Dribbble, href: '#', label: 'Dribbble' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/nikhil-v-879156283/", label: 'LinkedIn' },
   ];
 
   return (
@@ -79,7 +79,7 @@ const Contact = () => {
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
                   <a href="mailto:hello@carlosmendoza.com" className="text-lg font-semibold hover:text-primary transition-colors">
-                    hello@carlosmendoza.com
+                    djnikhil008@gmail.com
                   </a>
                 </div>
               </div>
@@ -90,11 +90,11 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="text-lg font-semibold">San Francisco, CA</p>
+                  <p className="text-lg font-semibold">Chennai, TamilNadu</p>
                 </div>
               </div>
             </div>
-
+ 
             {/* Social Links */}
             <div>
               <p className="text-sm text-muted-foreground mb-4">Follow Me</p>
