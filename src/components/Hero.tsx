@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { Instagram, Dribbble, Linkedin, ArrowUpRight } from 'lucide-react';
+import { Github, Linkedin, ArrowUpRight } from 'lucide-react';
+import profileImage from '@/assets/profile.jpeg';
 
 const Hero = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -29,8 +30,8 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-16">
           {/* Left side - Name */}
           <div className="reveal">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold leading-[0.9] tracking-tight">
-              <span className="yellow-underline">Nikhil</span>
+          <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold leading-[0.9] tracking-tight">
+              <span>Nikhil</span>
               <br />
               V
             </h1>
@@ -63,19 +64,17 @@ const Hero = () => {
             <span className="section-label">Follow Me</span>
             <div className="flex items-center gap-4">
               <a 
-                href="#" 
+                href="https://github.com/nikhilv008" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300"
               >
-                <Instagram size={20} />
+                <Github size={20} />
               </a>
               <a 
-                href="#" 
-                className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300"
-              >
-                <Dribbble size={20} />
-              </a>
-              <a 
-                href="#" 
+                href="https://www.linkedin.com/in/nikhil-v-879156283/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300"
               >
                 <Linkedin size={20} />
@@ -88,7 +87,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden border-2 border-border">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                  src={profileImage}
                   alt="Nikhil V"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />

@@ -59,7 +59,7 @@ const Navbar = () => {
             onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}
             className="text-xl font-display font-bold hover:text-primary transition-colors"
           >
-            CM<span className="text-primary">.</span>
+            NV<span className="text-primary">.</span>
           </a>
 
           {/* Desktop Navigation */}
