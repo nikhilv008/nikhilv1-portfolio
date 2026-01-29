@@ -5,30 +5,35 @@ const projects = [
   {
     title: 'Seone',
     category: 'Web Design',
+    techStack: 'React • Tailwind • API Integration',
     image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop',
     size: 'large',
   },
   {
     title: 'BeServer',
     category: 'Brand Identity',
+    techStack: 'Figma • Illustrator • Branding',
     image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&h=400&fit=crop',
     size: 'small',
   },
   {
     title: 'Energetic Tumbler',
     category: 'Product Design',
+    techStack: 'Figma • Prototyping • 3D',
     image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop',
     size: 'small',
   },
   {
     title: 'Luminous',
     category: 'UI/UX Design',
+    techStack: 'React • Framer Motion • CSS',
     image: 'https://images.unsplash.com/photo-1545235617-9465d2a55698?w=600&h=800&fit=crop',
     size: 'tall',
   },
   {
     title: 'Artisan',
     category: 'Web Application',
+    techStack: 'React • Node.js • MongoDB',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
     size: 'wide',
   },
@@ -89,7 +94,8 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <span className="text-primary text-sm font-medium mb-2 block">{projects[0].category}</span>
-                  <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">{projects[0].title}</h3>
+                  <h3 className="text-3xl md:text-4xl font-display font-bold mb-1">{projects[0].title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{projects[0].techStack}</p>
                   <span className="inline-flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity text-primary">
                     View Project <ArrowUpRight size={16} />
                   </span>
@@ -116,6 +122,7 @@ const Projects = () => {
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <span className="text-primary text-xs font-medium mb-1 block">{project.category}</span>
                     <h3 className="text-xl font-display font-bold">{project.title}</h3>
+                    <p className="text-xs text-muted-foreground mt-1">{project.techStack}</p>
                   </div>
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-primary/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -141,6 +148,7 @@ const Projects = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <span className="text-primary text-sm font-medium mb-2 block">{projects[4].category}</span>
                   <h3 className="text-2xl md:text-3xl font-display font-bold">{projects[4].title}</h3>
+                  <p className="text-sm text-muted-foreground mt-1">{projects[4].techStack}</p>
                 </div>
               </div>
             </div>
