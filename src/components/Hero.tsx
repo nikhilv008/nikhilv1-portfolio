@@ -44,9 +44,7 @@ const Hero = () => {
           <div className="reveal delay-200 lg:pt-8">
             <span className="section-label">Introduction</span>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-              I'm a multi-disciplinary designer and developer based in India, 
-              crafting premium digital experiences that blend aesthetics with functionality. 
-              I believe in the power of thoughtful design to transform businesses.
+              I'm a UI/UX designer and frontend developer focused on building clean, responsive, and user-friendly digital experiences. I turn ideas into functional, high-performing interfaces that solve real problems.
             </p>
             <div className="flex items-center gap-4">
               <a href="#contact" className="btn-primary flex items-center gap-2">
