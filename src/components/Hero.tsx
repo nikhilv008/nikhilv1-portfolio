@@ -35,6 +35,9 @@ const Hero = () => {
               <br />
               V
             </h1>
+            <p className="text-lg md:text-xl text-muted-foreground mt-4">
+              UI/UX Designer & Frontend Developer
+            </p>
           </div>
 
           {/* Right side - Introduction */}

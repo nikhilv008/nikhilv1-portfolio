@@ -62,9 +62,10 @@ const Contact = () => {
           {/* Left Side - Info */}
           <div className="reveal">
             <span className="section-label">Get In Touch</span>
-            <h2 className="section-heading mb-6">
+            <h2 className="section-heading mb-4">
               Let's Work <span className="text-primary">Together</span>
             </h2>
+            <p className="text-sm text-primary mb-6">I usually respond within 24 hours.</p>
             <p className="text-muted-foreground text-lg mb-12 max-w-md">
               Have a project in mind? I'd love to hear about it. Let's discuss how we can bring your vision to life.
             </p>
