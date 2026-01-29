@@ -1,4 +1,4 @@
-import { ArrowUp, Instagram, Dribbble, Linkedin } from 'lucide-react';
+import { ArrowUp, Github, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -8,9 +8,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Dribbble, href: '#', label: 'Dribbble' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/nikhilv008', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/nikhil-v-879156283/', label: 'LinkedIn' },
   ];
 
   return (
@@ -28,6 +27,8 @@ const Footer = () => {
               <a
                 key={social.label}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300"
                 title={social.label}
               >

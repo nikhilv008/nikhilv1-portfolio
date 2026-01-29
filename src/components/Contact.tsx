@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Send, Mail, MapPin, ArrowUpRight, Instagram, Dribbble, Linkedin } from 'lucide-react';
+import { Send, Mail, MapPin, ArrowUpRight, Github, Linkedin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -51,9 +51,8 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Dribbble, href: '#', label: 'Dribbble' },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/nikhil-v-879156283/", label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/nikhilv008', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/nikhil-v-879156283/', label: 'LinkedIn' },
   ];
 
   return (
@@ -99,10 +98,12 @@ const Contact = () => {
             <div>
               <p className="text-sm text-muted-foreground mb-4">Follow Me</p>
               <div className="flex gap-3">
-                {socialLinks.map((social) => (
+              {socialLinks.map((social) => (
                   <a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300"
                     title={social.label}
                   >
@@ -129,7 +130,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="form-input"
-                    placeholder="John Doe"
+                    placeholder="@@##!!"
                   />
                 </div>
 
@@ -145,7 +146,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="form-input"
-                    placeholder="john@example.com"
+                    placeholder="%%--@@"
                   />
                 </div>
 
@@ -161,7 +162,7 @@ const Contact = () => {
                     required
                     rows={5}
                     className="form-input resize-none"
-                    placeholder="Tell me about your project..."
+                    placeholder="###$$$%%%"
                   />
                 </div>
 
