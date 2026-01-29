@@ -7,6 +7,9 @@ const skills = [
   'CSS',
   'JavaScript',
   'Git & GitHub',
+  'API Integration',
+  'Responsive Layouts',
+  'UI Prototyping',
 ];
 
 const Skills = () => {
@@ -33,6 +36,13 @@ const Skills = () => {
   return (
     <section ref={sectionRef} id="skills" className="py-24">
       <div className="container mx-auto px-6">
+        {/* Availability Strip */}
+        <div className="reveal text-center mb-12">
+          <p className="text-sm text-primary font-medium">
+            Available for freelance and internship opportunities.
+          </p>
+        </div>
+
         <div className="reveal">
           <span className="section-label">Expertise</span>
           <h2 className="section-heading mb-12">

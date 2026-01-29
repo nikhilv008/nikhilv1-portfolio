@@ -81,6 +81,7 @@ const Contact = () => {
                   <a href="mailto:hello@carlosmendoza.com" className="text-lg font-semibold hover:text-primary transition-colors">
                     djnikhil008@gmail.com
                   </a>
+                  <p className="text-sm text-muted-foreground mt-1">Open to remote and on-site opportunities.</p>
                 </div>
               </div>
 

@@ -6,36 +6,51 @@ const projects = [
     title: 'Seone',
     category: 'Web Design',
     techStack: 'React • Tailwind • API Integration',
+    description: 'A modern, responsive web interface designed for performance and usability.',
     image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop',
     size: 'large',
+    liveUrl: '#',
+    sourceUrl: '#',
   },
   {
     title: 'BeServer',
     category: 'Brand Identity',
     techStack: 'Figma • Illustrator • Branding',
+    description: 'Clean branding system with cohesive visual identity across all touchpoints.',
     image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&h=400&fit=crop',
     size: 'small',
+    liveUrl: '#',
+    sourceUrl: '#',
   },
   {
     title: 'Energetic Tumbler',
     category: 'Product Design',
     techStack: 'Figma • Prototyping • 3D',
+    description: 'Product design concept with focus on user experience and visual appeal.',
     image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop',
     size: 'small',
+    liveUrl: '#',
+    sourceUrl: '#',
   },
   {
     title: 'Luminous',
     category: 'UI/UX Design',
     techStack: 'React • Framer Motion • CSS',
+    description: 'Interactive UI with smooth animations and intuitive navigation flow.',
     image: 'https://images.unsplash.com/photo-1545235617-9465d2a55698?w=600&h=800&fit=crop',
     size: 'tall',
+    liveUrl: '#',
+    sourceUrl: '#',
   },
   {
     title: 'Artisan',
     category: 'Web Application',
     techStack: 'React • Node.js • MongoDB',
+    description: 'Full-stack application with seamless user experience and robust backend.',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
     size: 'wide',
+    liveUrl: '#',
+    sourceUrl: '#',
   },
 ];
 
@@ -95,10 +110,16 @@ const Projects = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <span className="text-primary text-sm font-medium mb-2 block">{projects[0].category}</span>
                   <h3 className="text-3xl md:text-4xl font-display font-bold mb-1">{projects[0].title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4">{projects[0].techStack}</p>
-                  <span className="inline-flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity text-primary">
-                    View Project <ArrowUpRight size={16} />
-                  </span>
+                  <p className="text-sm text-muted-foreground mb-2">{projects[0].techStack}</p>
+                  <p className="text-sm text-muted-foreground/80 mb-4">{projects[0].description}</p>
+                  <div className="flex items-center gap-3">
+                    <a href={projects[0].liveUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-primary/20 text-primary text-xs font-medium rounded-full hover:bg-primary/30 transition-colors">
+                      Live Demo
+                    </a>
+                    <a href={projects[0].sourceUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-muted text-muted-foreground text-xs font-medium rounded-full hover:bg-muted/80 transition-colors">
+                      Source Code
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -123,6 +144,15 @@ const Projects = () => {
                     <span className="text-primary text-xs font-medium mb-1 block">{project.category}</span>
                     <h3 className="text-xl font-display font-bold">{project.title}</h3>
                     <p className="text-xs text-muted-foreground mt-1">{project.techStack}</p>
+                    <p className="text-xs text-muted-foreground/80 mt-1">{project.description}</p>
+                    <div className="flex items-center gap-2 mt-3">
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 bg-primary/20 text-primary text-xs font-medium rounded-full hover:bg-primary/30 transition-colors">
+                        Live Demo
+                      </a>
+                      <a href={project.sourceUrl} target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 bg-muted text-muted-foreground text-xs font-medium rounded-full hover:bg-muted/80 transition-colors">
+                        Source Code
+                      </a>
+                    </div>
                   </div>
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-primary/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -149,6 +179,15 @@ const Projects = () => {
                   <span className="text-primary text-sm font-medium mb-2 block">{projects[4].category}</span>
                   <h3 className="text-2xl md:text-3xl font-display font-bold">{projects[4].title}</h3>
                   <p className="text-sm text-muted-foreground mt-1">{projects[4].techStack}</p>
+                  <p className="text-sm text-muted-foreground/80 mt-1">{projects[4].description}</p>
+                  <div className="flex items-center gap-3 mt-4">
+                    <a href={projects[4].liveUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-primary/20 text-primary text-xs font-medium rounded-full hover:bg-primary/30 transition-colors">
+                      Live Demo
+                    </a>
+                    <a href={projects[4].sourceUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-muted text-muted-foreground text-xs font-medium rounded-full hover:bg-muted/80 transition-colors">
+                      Source Code
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
