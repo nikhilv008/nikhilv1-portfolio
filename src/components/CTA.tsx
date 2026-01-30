@@ -23,7 +23,7 @@ const CTA = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24">
+    <section ref={sectionRef} className="py-16">
       <div className="container mx-auto px-6">
         <div className="reveal text-center max-w-3xl mx-auto">
           <h2 className="section-heading mb-6">

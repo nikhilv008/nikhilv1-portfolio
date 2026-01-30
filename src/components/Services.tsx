@@ -44,7 +44,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="services" className="py-24">
+    <section ref={sectionRef} id="services" className="py-16">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="reveal mb-12">

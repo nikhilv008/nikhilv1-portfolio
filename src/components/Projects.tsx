@@ -3,51 +3,51 @@ import { ArrowUpRight } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Seone',
-    category: 'Web Design',
+    title: 'Project One',
+    category: 'Web App',
     techStack: 'React • Tailwind • API Integration',
-    description: 'A modern, responsive web interface designed for performance and usability.',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop',
+    description: 'A responsive dashboard that helps users track and manage their daily tasks efficiently.',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
     size: 'large',
     liveUrl: '#',
     sourceUrl: '#',
   },
   {
-    title: 'BeServer',
-    category: 'Brand Identity',
-    techStack: 'Figma • Illustrator • Branding',
-    description: 'Clean branding system with cohesive visual identity across all touchpoints.',
-    image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&h=400&fit=crop',
+    title: 'Project Two',
+    category: 'UI/UX',
+    techStack: 'Figma • React • CSS',
+    description: 'E-commerce interface redesign focused on improving conversion and user experience.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
     size: 'small',
     liveUrl: '#',
     sourceUrl: '#',
   },
   {
-    title: 'Energetic Tumbler',
-    category: 'Product Design',
-    techStack: 'Figma • Prototyping • 3D',
-    description: 'Product design concept with focus on user experience and visual appeal.',
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop',
+    title: 'Project Three',
+    category: 'Frontend',
+    techStack: 'React • JavaScript • REST API',
+    description: 'Weather application with real-time data fetching and location-based forecasts.',
+    image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop',
     size: 'small',
     liveUrl: '#',
     sourceUrl: '#',
   },
   {
-    title: 'Luminous',
-    category: 'UI/UX Design',
-    techStack: 'React • Framer Motion • CSS',
-    description: 'Interactive UI with smooth animations and intuitive navigation flow.',
-    image: 'https://images.unsplash.com/photo-1545235617-9465d2a55698?w=600&h=800&fit=crop',
+    title: 'Project Four',
+    category: 'Web App',
+    techStack: 'React • Node.js • MongoDB',
+    description: 'Portfolio generator that helps developers showcase their work professionally.',
+    image: 'https://images.unsplash.com/photo-1522542550221-31fd8575f4b5?w=600&h=800&fit=crop',
     size: 'tall',
     liveUrl: '#',
     sourceUrl: '#',
   },
   {
-    title: 'Artisan',
-    category: 'Web Application',
-    techStack: 'React • Node.js • MongoDB',
-    description: 'Full-stack application with seamless user experience and robust backend.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+    title: 'Project Five',
+    category: 'Frontend',
+    techStack: 'React • Tailwind • Firebase',
+    description: 'Note-taking app with cloud sync, markdown support, and collaborative editing.',
+    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop',
     size: 'wide',
     liveUrl: '#',
     sourceUrl: '#',
@@ -76,7 +76,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="works" className="py-24">
+    <section ref={sectionRef} id="works" className="py-16">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="reveal flex flex-col md:flex-row md:items-end md:justify-between mb-12">

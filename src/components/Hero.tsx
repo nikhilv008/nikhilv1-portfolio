@@ -24,10 +24,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="home" className="min-h-screen pt-24 pb-16">
+    <section ref={sectionRef} id="home" className="min-h-screen pt-20 pb-12">
       <div className="container mx-auto px-6">
         {/* Top row with name and intro */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-16">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-12">
           {/* Left side - Name */}
           <div className="reveal">
           <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold leading-[0.9] tracking-tight">
