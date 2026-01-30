@@ -44,14 +44,23 @@ const Services = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="services" className="py-16">
-      <div className="container mx-auto px-6">
+    <section ref={sectionRef} id="services" className="py-16 relative overflow-hidden">
+      {/* Subtle background glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]" />
+        <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-primary/3 rounded-full blur-[100px]" />
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="reveal mb-12">
           <span className="section-label">What I Do</span>
           <h2 className="section-heading">
             My <span className="text-primary">Services</span>
           </h2>
+          <p className="text-muted-foreground mt-4 text-lg">
+            Motivated to build real-world digital solutions
+          </p>
         </div>
 
         {/* Services Grid */}
@@ -59,7 +68,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`reveal ${service.isAccent ? 'bento-card-accent' : 'bento-card'} flex flex-col min-h-[320px]`}
+              className={`reveal ${service.isAccent ? 'bento-card-accent' : 'bento-card'} flex flex-col min-h-[320px] ${!service.isAccent ? 'shadow-lg border-border/60 hover:border-primary/40' : ''}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${
