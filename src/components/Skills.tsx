@@ -34,7 +34,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="skills" className="py-24">
+    <section ref={sectionRef} id="skills" className="py-16">
       <div className="container mx-auto px-6">
         {/* Availability Strip */}
         <div className="reveal text-center mb-12">

@@ -23,7 +23,7 @@ const Stats = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16">
+    <section ref={sectionRef} className="py-12">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-6">
           {/* Query Card */}

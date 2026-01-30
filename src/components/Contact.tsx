@@ -56,7 +56,7 @@ const Contact = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="contact" className="py-24">
+    <section ref={sectionRef} id="contact" className="py-16">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left Side - Info */}
