@@ -30,10 +30,8 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-12">
           {/* Left side - Name */}
           <div className="reveal">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold leading-[0.9] tracking-tight">
-              <span>Nikhil</span>
-              <br />
-              V
+          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold leading-[0.9] tracking-tight">
+              Nikhil V
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mt-4">
               UI/UX Designer & Frontend Developer
