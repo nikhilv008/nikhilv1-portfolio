@@ -6,52 +6,62 @@
 
 @layer base {
   :root {
-    /* Premium dark theme */
-    --background: 240 3% 11%;
-    --foreground: 0 0% 98%;
+    /* Premium neutral dark theme */
+    /* Obsidian - Main dark background */
+    --background: 0 0% 10%;
+    /* Mist - Light text on dark */
+    --foreground: 38 12% 92%;
 
-    --card: 240 3% 13%;
-    --card-foreground: 0 0% 98%;
+    /* Limestone - Light card surfaces */
+    --card: 42 8% 83%;
+    /* Graphite - Dark text on light cards */
+    --card-foreground: 60 2% 28%;
 
-    --popover: 240 3% 13%;
-    --popover-foreground: 0 0% 98%;
+    /* Limestone for popovers */
+    --popover: 42 8% 83%;
+    --popover-foreground: 60 2% 28%;
 
-    /* Vibrant yellow primary */
-    --primary: 51 100% 50%;
-    --primary-foreground: 240 3% 11%;
+    /* Graphite primary */
+    --primary: 60 2% 28%;
+    --primary-foreground: 38 12% 92%;
 
-    /* Muted gray secondary */
-    --secondary: 240 3% 20%;
-    --secondary-foreground: 0 0% 98%;
+    /* Mist secondary */
+    --secondary: 38 12% 92%;
+    --secondary-foreground: 60 2% 28%;
 
-    /* Muted tones */
-    --muted: 240 3% 18%;
-    --muted-foreground: 240 5% 60%;
+    /* Muted tones - Limestone base */
+    --muted: 42 8% 78%;
+    --muted-foreground: 60 1% 48%;
 
-    /* Accent - same as primary for cohesion */
-    --accent: 51 100% 50%;
-    --accent-foreground: 240 3% 11%;
+    /* Graphite accent */
+    --accent: 60 2% 28%;
+    --accent-foreground: 38 12% 92%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 3% 20%;
-    --input: 240 3% 20%;
-    --ring: 51 100% 50%;
+    /* Gravel-based borders */
+    --border: 60 1% 48%;
+    --input: 60 1% 48%;
+    --ring: 60 2% 28%;
 
     --radius: 1rem;
 
     /* Custom colors */
-    --yellow: 51 100% 50%;
-    --charcoal: 240 3% 11%;
-    --charcoal-light: 240 3% 16%;
+    --graphite: 60 2% 28%;
+    --graphite-light: 60 2% 38%;
+    --limestone: 42 8% 83%;
+    --mist: 38 12% 92%;
+    --gravel: 60 1% 48%;
+    --pebble: 155 3% 63%;
+    --obsidian: 0 0% 10%;
 
     /* Shadows */
     --shadow-sm: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
     --shadow-md: 0 8px 24px -8px hsl(0 0% 0% / 0.4);
     --shadow-lg: 0 16px 48px -16px hsl(0 0% 0% / 0.5);
-    --shadow-glow: 0 0 40px -10px hsl(51 100% 50% / 0.3);
-    --shadow-yellow: 0 8px 30px -8px hsl(51 100% 50% / 0.25);
+    --shadow-glow: 0 0 40px -10px hsl(60 2% 28% / 0.3);
+    --shadow-accent: 0 8px 30px -8px hsl(60 2% 28% / 0.25);
   }
 }
 
@@ -79,21 +89,22 @@
   .bento-card {
     @apply rounded-2xl p-6 transition-all duration-500 ease-out;
     background: hsl(var(--card));
-    border: 1px solid hsl(var(--border));
+    border: 1px solid hsl(var(--border) / 0.3);
+    color: hsl(var(--card-foreground));
   }
 
   .bento-card:hover {
     @apply -translate-y-1;
     box-shadow: var(--shadow-md);
-    border-color: hsl(var(--primary) / 0.2);
+    border-color: hsl(var(--gravel) / 0.5);
   }
 
-  /* Yellow accent card */
+  /* Accent card - darker on light */
   .bento-card-accent {
     @apply rounded-2xl p-6 transition-all duration-500 ease-out;
     background: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
-    box-shadow: var(--shadow-yellow);
+    box-shadow: var(--shadow-accent);
   }
 
   .bento-card-accent:hover {
@@ -101,13 +112,13 @@
     box-shadow: var(--shadow-lg), var(--shadow-glow);
   }
 
-  /* Yellow underline */
-  .yellow-underline {
+  /* Accent underline */
+  .accent-underline {
     position: relative;
     display: inline-block;
   }
 
-  .yellow-underline::after {
+  .accent-underline::after {
     content: '';
     position: absolute;
     bottom: 0.1em;
@@ -188,7 +199,7 @@
   .stat-number {
     @apply text-5xl md:text-6xl lg:text-7xl font-bold;
     font-family: 'Montserrat', sans-serif;
-    color: hsl(var(--primary));
+    color: hsl(var(--graphite));
   }
 
   /* Form inputs */
