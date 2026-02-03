@@ -53,13 +53,13 @@ export default {
         },
         graphite: {
           DEFAULT: "hsl(var(--graphite))",
-          light: "hsl(var(--graphite-light))",
+          dark: "hsl(var(--graphite-dark))",
         },
+        bodyText: "hsl(var(--body-text))",
         limestone: "hsl(var(--limestone))",
         mist: "hsl(var(--mist))",
+        cream: "hsl(var(--cream))",
         gravel: "hsl(var(--gravel))",
-        pebble: "hsl(var(--pebble))",
-        obsidian: "hsl(var(--obsidian))",
       },
       borderRadius: {
         lg: "var(--radius)",
