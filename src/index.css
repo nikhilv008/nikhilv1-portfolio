@@ -6,62 +6,62 @@
 
 @layer base {
   :root {
-    /* Premium neutral dark theme */
-    /* Obsidian - Main dark background */
-    --background: 0 0% 10%;
-    /* Mist - Light text on dark */
-    --foreground: 38 12% 92%;
+    /* Light premium neutral theme */
+    /* Warm off-white - Main site background */
+    --background: 45 17% 95%;
+    /* Graphite - Main text */
+    --foreground: 60 2% 28%;
 
-    /* Limestone - Light card surfaces */
+    /* Limestone - Card surfaces */
     --card: 42 8% 83%;
-    /* Graphite - Dark text on light cards */
+    /* Graphite - Card text */
     --card-foreground: 60 2% 28%;
 
     /* Limestone for popovers */
     --popover: 42 8% 83%;
     --popover-foreground: 60 2% 28%;
 
-    /* Graphite primary */
-    --primary: 60 2% 28%;
-    --primary-foreground: 38 12% 92%;
+    /* Charcoal primary for buttons */
+    --primary: 60 2% 24%;
+    --primary-foreground: 45 17% 95%;
 
     /* Mist secondary */
     --secondary: 38 12% 92%;
-    --secondary-foreground: 60 2% 28%;
+    --secondary-foreground: 60 2% 35%;
 
-    /* Muted tones - Limestone base */
-    --muted: 42 8% 78%;
+    /* Muted tones - Mist base */
+    --muted: 38 12% 92%;
     --muted-foreground: 60 1% 48%;
 
-    /* Graphite accent */
-    --accent: 60 2% 28%;
-    --accent-foreground: 38 12% 92%;
+    /* Charcoal accent */
+    --accent: 60 2% 24%;
+    --accent-foreground: 45 17% 95%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Gravel-based borders */
-    --border: 60 1% 48%;
-    --input: 60 1% 48%;
-    --ring: 60 2% 28%;
+    /* Gravel-based borders with softness */
+    --border: 60 1% 75%;
+    --input: 60 1% 75%;
+    --ring: 60 2% 24%;
 
     --radius: 1rem;
 
-    /* Custom colors */
+    /* Custom semantic colors */
     --graphite: 60 2% 28%;
-    --graphite-light: 60 2% 38%;
+    --graphite-dark: 60 2% 24%;
+    --body-text: 60 2% 35%;
     --limestone: 42 8% 83%;
     --mist: 38 12% 92%;
+    --cream: 45 17% 95%;
     --gravel: 60 1% 48%;
-    --pebble: 155 3% 63%;
-    --obsidian: 0 0% 10%;
 
-    /* Shadows */
-    --shadow-sm: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
-    --shadow-md: 0 8px 24px -8px hsl(0 0% 0% / 0.4);
-    --shadow-lg: 0 16px 48px -16px hsl(0 0% 0% / 0.5);
-    --shadow-glow: 0 0 40px -10px hsl(60 2% 28% / 0.3);
-    --shadow-accent: 0 8px 30px -8px hsl(60 2% 28% / 0.25);
+    /* Soft shadows for light theme */
+    --shadow-sm: 0 2px 8px -2px hsl(60 2% 28% / 0.06);
+    --shadow-md: 0 8px 24px -8px hsl(60 2% 28% / 0.08);
+    --shadow-lg: 0 16px 48px -16px hsl(60 2% 28% / 0.12);
+    --shadow-glow: 0 0 40px -10px hsl(60 2% 24% / 0.1);
+    --shadow-accent: 0 8px 30px -8px hsl(60 2% 24% / 0.15);
   }
 }
 
@@ -89,17 +89,17 @@
   .bento-card {
     @apply rounded-2xl p-6 transition-all duration-500 ease-out;
     background: hsl(var(--card));
-    border: 1px solid hsl(var(--border) / 0.3);
+    border: 1px solid hsl(var(--gravel) / 0.2);
     color: hsl(var(--card-foreground));
   }
 
   .bento-card:hover {
     @apply -translate-y-1;
     box-shadow: var(--shadow-md);
-    border-color: hsl(var(--gravel) / 0.5);
+    border-color: hsl(var(--gravel) / 0.35);
   }
 
-  /* Accent card - darker on light */
+  /* Accent card - darker elegant */
   .bento-card-accent {
     @apply rounded-2xl p-6 transition-all duration-500 ease-out;
     background: hsl(var(--primary));
@@ -109,7 +109,8 @@
 
   .bento-card-accent:hover {
     @apply -translate-y-1 scale-[1.02];
-    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    background: hsl(60 2% 20%);
+    box-shadow: var(--shadow-lg);
   }
 
   /* Accent underline */
@@ -153,12 +154,13 @@
 
   .btn-primary:hover {
     @apply scale-105;
-    box-shadow: var(--shadow-glow);
+    background: hsl(60 2% 20%);
+    box-shadow: var(--shadow-md);
   }
 
   .btn-outline {
     @apply px-6 py-3 rounded-full font-semibold transition-all duration-300 border;
-    border-color: hsl(var(--border));
+    border-color: hsl(var(--gravel) / 0.4);
     color: hsl(var(--foreground));
     background: transparent;
   }
@@ -171,7 +173,7 @@
   /* Blog item */
   .blog-item {
     @apply flex items-center justify-between py-6 border-b transition-all duration-300;
-    border-color: hsl(var(--border));
+    border-color: hsl(var(--gravel) / 0.2);
   }
 
   .blog-item:hover {
@@ -205,14 +207,14 @@
   /* Form inputs */
   .form-input {
     @apply w-full px-5 py-4 rounded-xl border transition-all duration-300 outline-none;
-    background: hsl(var(--muted));
-    border-color: hsl(var(--border));
+    background: hsl(var(--mist));
+    border-color: hsl(var(--gravel) / 0.25);
     color: hsl(var(--foreground));
   }
 
   .form-input:focus {
     border-color: hsl(var(--primary));
-    box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
+    box-shadow: 0 0 0 3px hsl(var(--primary) / 0.08);
   }
 
   .form-input::placeholder {
