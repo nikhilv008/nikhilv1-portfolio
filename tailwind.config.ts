@@ -51,15 +51,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        graphite: {
-          DEFAULT: "hsl(var(--graphite))",
-          dark: "hsl(var(--graphite-dark))",
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          dark: "hsl(var(--gold-dark))",
+          light: "hsl(var(--gold-light))",
         },
-        bodyText: "hsl(var(--body-text))",
-        limestone: "hsl(var(--limestone))",
-        mist: "hsl(var(--mist))",
-        cream: "hsl(var(--cream))",
-        gravel: "hsl(var(--gravel))",
+        charcoal: {
+          DEFAULT: "hsl(var(--charcoal))",
+          light: "hsl(var(--charcoal-light))",
+        },
+        ivory: "hsl(var(--ivory))",
+        sand: "hsl(var(--sand))",
+        slate: "hsl(var(--slate))",
       },
       borderRadius: {
         lg: "var(--radius)",
