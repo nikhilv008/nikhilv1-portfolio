@@ -51,11 +51,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        yellow: "hsl(var(--yellow))",
-        charcoal: {
-          DEFAULT: "hsl(var(--charcoal))",
-          light: "hsl(var(--charcoal-light))",
+        graphite: {
+          DEFAULT: "hsl(var(--graphite))",
+          light: "hsl(var(--graphite-light))",
         },
+        limestone: "hsl(var(--limestone))",
+        mist: "hsl(var(--mist))",
+        gravel: "hsl(var(--gravel))",
+        pebble: "hsl(var(--pebble))",
+        obsidian: "hsl(var(--obsidian))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -70,7 +74,7 @@ export default {
         'medium': 'var(--shadow-md)',
         'large': 'var(--shadow-lg)',
         'glow': 'var(--shadow-glow)',
-        'yellow': 'var(--shadow-yellow)',
+        'accent': 'var(--shadow-accent)',
       },
       keyframes: {
         "accordion-down": {
