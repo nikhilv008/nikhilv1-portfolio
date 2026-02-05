@@ -6,63 +6,65 @@
 
 @layer base {
   :root {
-    /* Editorial luxury light theme */
-    /* Warm ivory - Main site background */
-    --background: 45 25% 96%;
-    /* Dark charcoal - Main text */
-    --foreground: 0 0% 17%;
+    /* Professional Teal & Cream Theme */
+    /* Soft cream - Main site background #F4F1EA */
+    --background: 39 23% 94%;
+    /* Deep teal charcoal - Main headings #1F2F2F */
+    --foreground: 180 20% 15%;
 
-    /* Pure white - Card surfaces */
+    /* White - Card surfaces #FFFFFF */
     --card: 0 0% 100%;
-    /* Dark charcoal - Card text */
-    --card-foreground: 0 0% 17%;
+    /* Deep teal charcoal - Card text */
+    --card-foreground: 180 20% 15%;
 
     /* White for popovers */
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 17%;
+    --popover-foreground: 180 20% 15%;
 
-    /* Dark charcoal primary for buttons */
-    --primary: 0 0% 17%;
-    --primary-foreground: 45 25% 96%;
+    /* Warm gold accent for buttons #D9A441 */
+    --primary: 41 64% 55%;
+    --primary-foreground: 39 23% 94%;
 
-    /* Alternate section background */
-    --secondary: 40 15% 91%;
-    --secondary-foreground: 0 0% 17%;
+    /* Alternate section background #E9E4DB */
+    --secondary: 36 19% 88%;
+    --secondary-foreground: 180 20% 15%;
 
     /* Muted tones */
-    --muted: 40 15% 91%;
-    --muted-foreground: 0 0% 29%;
+    --muted: 36 19% 88%;
+    /* Body text #3C3C3C */
+    --muted-foreground: 0 0% 24%;
 
-    /* Gold accent */
-    --accent: 41 41% 55%;
+    /* Warm gold accent #D9A441 */
+    --accent: 41 64% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
     /* Soft borders */
-    --border: 40 10% 85%;
-    --input: 40 10% 85%;
-    --ring: 41 41% 55%;
+    --border: 36 15% 80%;
+    --input: 36 15% 80%;
+    --ring: 41 64% 55%;
 
     --radius: 1rem;
 
-    /* Custom semantic colors */
-    --gold: 41 41% 55%;
-    --gold-dark: 41 45% 45%;
-    --gold-light: 41 35% 65%;
-    --charcoal: 0 0% 17%;
-    --charcoal-light: 0 0% 29%;
-    --ivory: 45 25% 96%;
-    --sand: 40 15% 91%;
-    --slate: 0 0% 29%;
+    /* Custom semantic colors - Teal & Cream palette */
+    --gold: 41 64% 55%;
+    --gold-dark: 41 64% 45%;
+    --gold-light: 41 64% 65%;
+    --teal-dark: 180 14% 22%; /* Navbar/footer #2F3F3F */
+    --charcoal: 180 20% 15%;
+    --charcoal-light: 0 0% 24%;
+    --ivory: 39 23% 94%;
+    --sand: 36 19% 88%;
+    --slate: 0 0% 24%;
 
     /* Elegant shadows */
-    --shadow-sm: 0 2px 8px -2px hsl(0 0% 17% / 0.04);
-    --shadow-md: 0 8px 24px -8px hsl(0 0% 17% / 0.06);
-    --shadow-lg: 0 16px 48px -16px hsl(0 0% 17% / 0.1);
-    --shadow-glow: 0 0 40px -10px hsl(41 41% 55% / 0.15);
-    --shadow-accent: 0 8px 30px -8px hsl(41 41% 55% / 0.2);
+    --shadow-sm: 0 2px 8px -2px hsl(180 20% 15% / 0.06);
+    --shadow-md: 0 8px 24px -8px hsl(180 20% 15% / 0.08);
+    --shadow-lg: 0 16px 48px -16px hsl(180 20% 15% / 0.12);
+    --shadow-glow: 0 0 40px -10px hsl(41 64% 55% / 0.2);
+    --shadow-accent: 0 8px 30px -8px hsl(41 64% 55% / 0.25);
   }
 }
 
@@ -149,26 +151,27 @@
   /* Button variants */
   .btn-primary {
     @apply px-6 py-3 rounded-full font-semibold transition-all duration-300;
-    background: hsl(var(--charcoal));
-    color: hsl(var(--ivory));
+    background: hsl(var(--gold));
+    color: hsl(0 0% 100%);
+    box-shadow: var(--shadow-accent);
   }
 
   .btn-primary:hover {
-    @apply scale-105;
-    background: hsl(0 0% 12%);
-    box-shadow: var(--shadow-md);
+    @apply scale-105 brightness-110;
+    background: hsl(var(--gold-dark));
+    box-shadow: var(--shadow-glow);
   }
 
   .btn-accent {
     @apply px-6 py-3 rounded-full font-semibold transition-all duration-300;
-    background: hsl(var(--gold));
+    background: hsl(var(--teal-dark));
     color: hsl(0 0% 100%);
   }
 
   .btn-accent:hover {
     @apply scale-105;
-    background: hsl(var(--gold-dark));
-    box-shadow: var(--shadow-accent);
+    background: hsl(180 14% 18%);
+    box-shadow: var(--shadow-md);
   }
 
   .btn-outline {
