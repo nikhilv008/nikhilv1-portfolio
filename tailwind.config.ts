@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['Playfair Display', 'Times New Roman', 'Georgia', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,17 +51,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          dark: "hsl(var(--gold-dark))",
-          light: "hsl(var(--gold-light))",
+        "deep-blue": {
+          DEFAULT: "hsl(var(--deep-blue))",
+          dark: "hsl(var(--deep-blue-dark))",
+          light: "hsl(var(--deep-blue-light))",
         },
-        teal: {
-          dark: "hsl(var(--teal-dark))",
+        "deep-green": {
+          DEFAULT: "hsl(var(--deep-green))",
         },
         charcoal: {
           DEFAULT: "hsl(var(--charcoal))",
-          light: "hsl(var(--charcoal-light))",
         },
         ivory: "hsl(var(--ivory))",
         sand: "hsl(var(--sand))",

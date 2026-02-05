@@ -2,40 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
 @layer base {
   :root {
-    /* Professional Teal & Cream Theme */
-    /* Soft cream - Main site background #F4F1EA */
-    --background: 39 23% 94%;
-    /* Deep teal charcoal - Main headings #1F2F2F */
-    --foreground: 180 20% 15%;
+    /* Premium Deep Green & Blue Theme */
+    /* Warm light cream - Main site background #F6F2E9 */
+    --background: 42 39% 94%;
+    /* Deep green - Main headings #2E3F3A */
+    --foreground: 162 16% 21%;
 
-    /* White - Card surfaces #FFFFFF */
+    /* White - Card surfaces */
     --card: 0 0% 100%;
-    /* Deep teal charcoal - Card text */
-    --card-foreground: 180 20% 15%;
+    /* Deep green - Card text */
+    --card-foreground: 162 16% 21%;
 
     /* White for popovers */
     --popover: 0 0% 100%;
-    --popover-foreground: 180 20% 15%;
+    --popover-foreground: 162 16% 21%;
 
-    /* Warm gold accent for buttons #D9A441 */
-    --primary: 41 64% 55%;
-    --primary-foreground: 39 23% 94%;
+    /* Deep blue accent for buttons #073763 */
+    --primary: 209 87% 21%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Alternate section background #E9E4DB */
-    --secondary: 36 19% 88%;
-    --secondary-foreground: 180 20% 15%;
+    /* Section background #EFE9DD */
+    --secondary: 40 35% 90%;
+    --secondary-foreground: 162 16% 21%;
 
     /* Muted tones */
-    --muted: 36 19% 88%;
-    /* Body text #3C3C3C */
-    --muted-foreground: 0 0% 24%;
+    --muted: 40 35% 90%;
+    /* Body text #3A3A3A */
+    --muted-foreground: 0 0% 23%;
 
-    /* Warm gold accent #D9A441 */
-    --accent: 41 64% 55%;
+    /* Deep blue accent #073763 */
+    --accent: 209 87% 21%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
@@ -44,27 +44,26 @@
     /* Soft borders */
     --border: 36 15% 80%;
     --input: 36 15% 80%;
-    --ring: 41 64% 55%;
+    --ring: 209 87% 21%;
 
     --radius: 1rem;
 
-    /* Custom semantic colors - Teal & Cream palette */
-    --gold: 41 64% 55%;
-    --gold-dark: 41 64% 45%;
-    --gold-light: 41 64% 65%;
-    --teal-dark: 180 14% 22%; /* Navbar/footer #2F3F3F */
-    --charcoal: 180 20% 15%;
-    --charcoal-light: 0 0% 24%;
-    --ivory: 39 23% 94%;
-    --sand: 36 19% 88%;
-    --slate: 0 0% 24%;
+    /* Custom semantic colors - Deep Green & Blue palette */
+    --deep-blue: 209 87% 21%;
+    --deep-blue-dark: 209 87% 16%;
+    --deep-blue-light: 209 87% 28%;
+    --deep-green: 162 16% 21%; /* Navbar/footer #2E3F3A */
+    --charcoal: 0 0% 23%;
+    --ivory: 42 39% 94%;
+    --sand: 40 35% 90%;
+    --slate: 0 0% 23%;
 
     /* Elegant shadows */
-    --shadow-sm: 0 2px 8px -2px hsl(180 20% 15% / 0.06);
-    --shadow-md: 0 8px 24px -8px hsl(180 20% 15% / 0.08);
-    --shadow-lg: 0 16px 48px -16px hsl(180 20% 15% / 0.12);
-    --shadow-glow: 0 0 40px -10px hsl(41 64% 55% / 0.2);
-    --shadow-accent: 0 8px 30px -8px hsl(41 64% 55% / 0.25);
+    --shadow-sm: 0 2px 8px -2px hsl(162 16% 21% / 0.06);
+    --shadow-md: 0 8px 24px -8px hsl(162 16% 21% / 0.08);
+    --shadow-lg: 0 16px 48px -16px hsl(162 16% 21% / 0.12);
+    --shadow-glow: 0 0 40px -10px hsl(209 87% 21% / 0.2);
+    --shadow-accent: 0 8px 30px -8px hsl(209 87% 21% / 0.25);
   }
 }
 
@@ -83,7 +82,8 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', 'Inter', system-ui, sans-serif;
+    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-weight: 600;
   }
 }
 
@@ -99,20 +99,20 @@
   .bento-card:hover {
     @apply -translate-y-1;
     box-shadow: var(--shadow-md);
-    border-color: hsl(var(--gold) / 0.4);
+    border-color: hsl(var(--deep-blue) / 0.4);
   }
 
-  /* Accent card - gold elegant */
+  /* Accent card - deep blue elegant */
   .bento-card-accent {
     @apply rounded-2xl p-6 transition-all duration-500 ease-out;
-    background: hsl(var(--gold));
+    background: hsl(var(--deep-blue));
     color: hsl(0 0% 100%);
     box-shadow: var(--shadow-accent);
   }
 
   .bento-card-accent:hover {
     @apply -translate-y-1 scale-[1.02];
-    background: hsl(var(--gold-dark));
+    background: hsl(var(--deep-blue-dark));
     box-shadow: var(--shadow-lg);
   }
 
@@ -129,7 +129,7 @@
     left: 0;
     width: 100%;
     height: 0.15em;
-    background: hsl(var(--gold));
+    background: hsl(var(--deep-blue));
     border-radius: 2px;
   }
 
@@ -151,26 +151,26 @@
   /* Button variants */
   .btn-primary {
     @apply px-6 py-3 rounded-full font-semibold transition-all duration-300;
-    background: hsl(var(--gold));
+    background: hsl(var(--deep-blue));
     color: hsl(0 0% 100%);
     box-shadow: var(--shadow-accent);
   }
 
   .btn-primary:hover {
     @apply scale-105 brightness-110;
-    background: hsl(var(--gold-dark));
+    background: hsl(var(--deep-blue-dark));
     box-shadow: var(--shadow-glow);
   }
 
   .btn-accent {
     @apply px-6 py-3 rounded-full font-semibold transition-all duration-300;
-    background: hsl(var(--teal-dark));
+    background: hsl(var(--deep-green));
     color: hsl(0 0% 100%);
   }
 
   .btn-accent:hover {
     @apply scale-105;
-    background: hsl(180 14% 18%);
+    background: hsl(162 16% 16%);
     box-shadow: var(--shadow-md);
   }
 
@@ -182,8 +182,8 @@
   }
 
   .btn-outline:hover {
-    border-color: hsl(var(--gold));
-    color: hsl(var(--gold));
+    border-color: hsl(var(--deep-blue));
+    color: hsl(var(--deep-blue));
   }
 
   /* Blog item */
@@ -194,30 +194,30 @@
 
   .blog-item:hover {
     @apply pl-4;
-    border-color: hsl(var(--gold));
+    border-color: hsl(var(--deep-blue));
   }
 
   .blog-item:hover .blog-arrow {
     @apply translate-x-2;
-    color: hsl(var(--gold));
+    color: hsl(var(--deep-blue));
   }
 
   /* Section heading */
   .section-label {
     @apply text-xs uppercase tracking-[0.2em] font-medium mb-4;
-    color: hsl(var(--gold));
+    color: hsl(var(--deep-blue));
   }
 
   .section-heading {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
   }
 
   /* Stat number */
   .stat-number {
     @apply text-5xl md:text-6xl lg:text-7xl font-bold;
-    font-family: 'Montserrat', sans-serif;
-    color: hsl(var(--charcoal));
+    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    color: hsl(var(--deep-green));
   }
 
   /* Form inputs */
@@ -229,8 +229,8 @@
   }
 
   .form-input:focus {
-    border-color: hsl(var(--gold));
-    box-shadow: 0 0 0 3px hsl(var(--gold) / 0.1);
+    border-color: hsl(var(--deep-blue));
+    box-shadow: 0 0 0 3px hsl(var(--deep-blue) / 0.1);
   }
 
   .form-input::placeholder {
@@ -248,7 +248,7 @@
   }
 
   .nav-link.active {
-    color: hsl(var(--gold));
+    color: hsl(var(--deep-blue));
   }
 }
 
