@@ -147,7 +147,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="form-input"
-                    placeholder="@@##!!"
+                    placeholder="Your full name"
                   />
                 </div>
 
@@ -163,7 +163,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="form-input"
-                    placeholder="%%--@@"
+                    placeholder="your@email.com"
                   />
                 </div>
 
@@ -179,7 +179,7 @@ const Contact = () => {
                     required
                     rows={5}
                     className="form-input resize-none"
-                    placeholder="###$$$%%%"
+                    placeholder="Tell me about your project..."
                   />
                 </div>
 

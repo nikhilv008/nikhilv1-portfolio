@@ -34,7 +34,7 @@ const Hero = () => {
               Nikhil V
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mt-4">
-              UI/UX Designer & Frontend Developer
+              Web Developer & Full-Stack Developer
             </p>
           </div>
 
@@ -42,7 +42,7 @@ const Hero = () => {
           <div className="reveal delay-200 lg:pt-8">
             <span className="section-label">Introduction</span>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-              I'm a UI/UX designer and frontend developer focused on building clean, responsive, and user-friendly digital experiences. I turn ideas into functional, high-performing interfaces that solve real problems.
+              I'm a web developer specializing in modern website design and full-stack web applications. I build responsive, high-performance websites that help businesses grow and establish a strong digital presence.
             </p>
             <div className="flex items-center gap-4">
               <a href="#contact" className="btn-primary flex items-center gap-2">
