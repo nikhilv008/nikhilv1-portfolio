@@ -46,8 +46,8 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-background/90 backdrop-blur-xl border-b border-border' 
-          : 'bg-transparent'
+          ? 'bg-[hsl(162_16%_21%)] backdrop-blur-xl border-b border-[hsl(162_16%_16%)]' 
+          : 'bg-[hsl(162_16%_21%)]'
       }`}
     >
       <div className="container mx-auto px-6">
@@ -56,9 +56,9 @@ const Navbar = () => {
           <a 
             href="#home" 
             onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}
-            className="text-xl font-display font-bold hover:text-primary transition-colors"
+            className="text-xl font-display font-bold text-white hover:text-white/80 transition-colors"
           >
-            NV<span className="text-primary">.</span>
+            NV<span className="text-[hsl(209_87%_50%)]">.</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -67,7 +67,11 @@ const Navbar = () => {
               <button
                 key={link.label}
                 onClick={() => handleNavClick(link.href)}
-                className={`nav-link ${activeSection === link.href.slice(1) ? 'active' : ''}`}
+                className={`text-sm font-medium transition-colors duration-300 ${
+                  activeSection === link.href.slice(1) 
+                    ? 'text-[hsl(209_87%_50%)]' 
+                    : 'text-white/70 hover:text-white'
+                }`}
               >
                 {link.label}
               </button>
@@ -78,7 +82,7 @@ const Navbar = () => {
           <a 
             href="#contact"
             onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
-            className="hidden md:block btn-primary text-sm"
+            className="hidden md:block px-5 py-2.5 rounded-full font-semibold text-sm bg-[hsl(209_87%_21%)] text-white hover:bg-[hsl(209_87%_28%)] transition-all duration-300"
           >
             Hire Me
           </a>
@@ -86,7 +90,7 @@ const Navbar = () => {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 hover:text-primary transition-colors"
+            className="md:hidden p-2 text-white hover:text-white/80 transition-colors"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -94,13 +98,17 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-6 border-t border-border animate-fade-in">
+          <div className="md:hidden py-6 border-t border-white/10 animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <button
                   key={link.label}
                   onClick={() => handleNavClick(link.href)}
-                  className={`nav-link text-left py-2 ${activeSection === link.href.slice(1) ? 'active' : ''}`}
+                  className={`text-left py-2 text-sm font-medium transition-colors ${
+                    activeSection === link.href.slice(1) 
+                      ? 'text-[hsl(209_87%_50%)]' 
+                      : 'text-white/70 hover:text-white'
+                  }`}
                 >
                   {link.label}
                 </button>
@@ -108,7 +116,7 @@ const Navbar = () => {
               <a 
                 href="#contact"
                 onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
-                className="btn-primary text-center mt-4"
+                className="text-center mt-4 px-5 py-2.5 rounded-full font-semibold bg-[hsl(209_87%_21%)] text-white hover:bg-[hsl(209_87%_28%)] transition-all duration-300"
               >
                 Hire Me
               </a>
