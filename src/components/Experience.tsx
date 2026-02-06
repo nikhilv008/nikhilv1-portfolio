@@ -5,7 +5,7 @@ const experiences = [
   {
     icon: Cloud,
     title: 'Cloud Virtual Intern',
-    company: 'AICTE (Virtual Internship)',
+    company: 'AICTC (Virtual Internship)',
     date: 'Apr 2025 – Jun 2025',
     points: [
       'Learned cloud computing fundamentals, deployment models, and real-world cloud workflows',
@@ -15,7 +15,7 @@ const experiences = [
   {
     icon: Shield,
     title: 'Cybersecurity Virtual Intern',
-    company: 'AICTE (Virtual Internship)',
+    company: 'AICTC (Virtual Internship)',
     date: 'Oct 2024 – Dec 2024',
     points: [
       'Gained hands-on knowledge of cybersecurity principles and threat prevention',

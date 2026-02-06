@@ -33,13 +33,14 @@ const Hero = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold leading-[0.9] tracking-tight">
               Nikhil V
             </h1>
-            <p className="text-2xl md:text-3xl font-display font-medium text-muted-foreground mt-4">
+            <p className="text-lg md:text-xl text-muted-foreground mt-4">
               Web Developer
             </p>
           </div>
 
           {/* Right side - Introduction */}
           <div className="reveal delay-200 lg:pt-8">
+            <span className="section-label">Introduction</span>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
               I'm a web developer specializing in modern website design and full-stack web applications. I build responsive, high-performance websites that help businesses grow and establish a strong digital presence.
             </p>
@@ -87,11 +88,11 @@ const Hero = () => {
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
               </div>
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full font-semibold text-sm">
+                Available for work
+              </div>
             </div>
-            {/* Availability text below image */}
-            <p className="text-center text-muted-foreground mt-6 text-sm">
-              Available for freelance and internship opportunities.
-            </p>
           </div>
 
           {/* Quick stat */}
