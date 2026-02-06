@@ -60,9 +60,9 @@ const Projects = () => {
         <div className="reveal flex flex-col md:flex-row md:items-end md:justify-between mb-12">
           <div>
             <span className="section-label">Portfolio</span>
-            <h2 className="section-heading">
-              Featured <span className="text-primary">Works</span>
-            </h2>
+          <h2 className="section-heading">
+            <span className="text-primary">Projects</span>
+          </h2>
           </div>
         </div>
 
@@ -82,9 +82,6 @@ const Projects = () => {
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
-                  <span className="absolute top-4 left-4 px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
-                    {project.category}
-                  </span>
                 </div>
                 
                 {/* Content */}

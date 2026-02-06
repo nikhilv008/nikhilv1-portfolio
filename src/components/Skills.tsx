@@ -1,15 +1,15 @@
 import { useEffect, useRef } from 'react';
 
 const skills = [
-  'UI/UX Design',
-  'React.js',
+  'React',
+  'JavaScript',
   'HTML',
   'CSS',
-  'JavaScript',
-  'Git & GitHub',
+  'Python',
+  'MySQL',
+  'GitHub',
   'API Integration',
-  'Responsive Layouts',
-  'UI Prototyping',
+  'MS Office',
 ];
 
 const Skills = () => {

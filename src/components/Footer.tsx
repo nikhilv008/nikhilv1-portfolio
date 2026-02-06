@@ -1,4 +1,4 @@
-import { ArrowUp, Github, Linkedin } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -6,11 +6,6 @@ const Footer = () => {
   };
 
   const currentYear = new Date().getFullYear();
-
-  const socialLinks = [
-    { icon: Github, href: 'https://github.com/nikhilv008', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/nikhil-v-879156283/', label: 'LinkedIn' },
-  ];
 
   return (
     <footer className="py-8 bg-[hsl(162_16%_21%)] text-white">
@@ -21,21 +16,6 @@ const Footer = () => {
             Nikhil V<span className="text-[hsl(209_87%_50%)]">.dev</span>
           </a>
 
-          {/* Social Links */}
-          <div className="flex items-center gap-4">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white/70 hover:border-[hsl(209_87%_50%)] hover:text-[hsl(209_87%_50%)] transition-all duration-300"
-                title={social.label}
-              >
-                <social.icon size={18} />
-              </a>
-            ))}
-          </div>
 
           {/* Copyright & Back to Top */}
           <div className="flex items-center gap-6">

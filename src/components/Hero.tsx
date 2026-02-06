@@ -34,7 +34,7 @@ const Hero = () => {
               Nikhil V
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mt-4">
-              Web Developer & Full-Stack Developer
+              Web Developer
             </p>
           </div>
 
@@ -45,12 +45,9 @@ const Hero = () => {
               I'm a web developer specializing in modern website design and full-stack web applications. I build responsive, high-performance websites that help businesses grow and establish a strong digital presence.
             </p>
             <div className="flex items-center gap-4">
-              <a href="#contact" className="btn-primary flex items-center gap-2">
-                Let's Talk
-                <ArrowUpRight size={18} />
-              </a>
-              <a href="#works" className="btn-outline">
+              <a href="#works" className="btn-primary flex items-center gap-2">
                 View Work
+                <ArrowUpRight size={18} />
               </a>
             </div>
           </div>
