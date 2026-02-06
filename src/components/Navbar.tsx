@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Works', href: '#works' },
+  { label: 'Home', href: '#home' },
+  { label: 'Projects', href: '#works' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -61,12 +63,12 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <button
                 key={link.label}
                 onClick={() => handleNavClick(link.href)}
-                className={`text-sm font-medium transition-colors duration-300 ${
+                className={`text-sm font-semibold tracking-wide transition-colors duration-300 ${
                   activeSection === link.href.slice(1) 
                     ? 'text-[hsl(209_87%_50%)]' 
                     : 'text-white/70 hover:text-white'
