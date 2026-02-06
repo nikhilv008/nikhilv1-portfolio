@@ -76,7 +76,6 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left Side - Info */}
           <div className="reveal">
-            <span className="section-label">Get In Touch</span>
             <h2 className="section-heading mb-4">
               Let's Work <span className="text-primary">Together</span>
             </h2>

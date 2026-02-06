@@ -4,20 +4,20 @@ import { Palette, Layers, Code2, ArrowUpRight } from 'lucide-react';
 const services = [
   {
     icon: Palette,
-    title: 'Product Designer',
-    description: 'Creating intuitive user experiences and beautiful interfaces that drive engagement and conversion.',
+    title: 'Content Writing',
+    description: 'Crafting compelling, SEO-friendly content that engages readers and drives meaningful results.',
     isAccent: true,
   },
   {
     icon: Layers,
-    title: 'Branding Designer',
-    description: 'Building memorable brand identities that resonate with your target audience and stand out.',
+    title: 'Personal Branding',
+    description: 'Building your unique digital identity to stand out and connect with your target audience.',
     isAccent: false,
   },
   {
     icon: Code2,
-    title: 'Full Stack Developer',
-    description: 'Developing robust, scalable applications using modern technologies and best practices.',
+    title: 'Web Developer',
+    description: 'Creating responsive, high-performance websites using modern technologies and best practices.',
     isAccent: false,
   },
 ];
@@ -53,22 +53,18 @@ const Services = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="reveal mb-12">
-          <span className="section-label">What I Do</span>
+        <div className="reveal mb-10 text-center">
           <h2 className="section-heading">
             My <span className="text-primary">Services</span>
           </h2>
-          <p className="text-muted-foreground mt-4 text-lg">
-            Motivated to build real-world digital solutions
-          </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-5 max-w-4xl mx-auto">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`reveal ${service.isAccent ? 'bento-card-accent' : 'bento-card'} flex flex-col min-h-[320px] ${!service.isAccent ? 'shadow-lg border-border/60 hover:border-primary/40' : ''}`}
+              className={`reveal ${service.isAccent ? 'bento-card-accent' : 'bento-card'} flex flex-col min-h-[260px] p-6 ${!service.isAccent ? 'shadow-lg border-border/60 hover:border-primary/40' : ''}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${
