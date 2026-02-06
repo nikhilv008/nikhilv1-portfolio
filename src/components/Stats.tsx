@@ -23,39 +23,31 @@ const Stats = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-12">
+    <section ref={sectionRef} className="py-8">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
           {/* Query Card */}
-          <div className="reveal bento-card flex flex-col justify-between min-h-[200px]">
-            <div>
-              <MessageCircle size={32} className="text-primary mb-4" />
-              <h3 className="text-xl font-display font-semibold mb-2">
-                Any Type of Query
-              </h3>
-              <p className="text-muted-foreground text-sm">
-                Feel free to reach out for projects, collaborations, or just to say hello.
-              </p>
-            </div>
+          <div className="reveal bento-card flex flex-col justify-center items-center text-center p-4 min-h-[120px]">
+            <MessageCircle size={24} className="text-primary mb-2" />
             <a 
               href="#contact" 
-              className="inline-flex items-center gap-2 text-primary font-medium mt-4 group"
+              className="inline-flex items-center gap-1 text-primary font-medium text-sm group"
             >
-              Get in Touch
-              <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              Contact
+              <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
 
           {/* Experience Stat */}
-          <div className="reveal delay-100 bento-card flex flex-col justify-center items-center text-center min-h-[200px]">
-            <span className="stat-number">fresher</span>
-            <p className="text-muted-foreground mt-2">Eager to Explore</p>
+          <div className="reveal delay-100 bento-card flex flex-col justify-center items-center text-center p-4 min-h-[120px]">
+            <span className="text-2xl font-display font-bold text-foreground">Fresher</span>
+            <p className="text-muted-foreground text-xs mt-1">Eager to Explore</p>
           </div>
 
           {/* Clients Stat */}
-          <div className="reveal delay-200 bento-card flex flex-col justify-center items-center text-center min-h-[200px]">
-            <span className="stat-number">2</span>
-            <p className="text-muted-foreground mt-2">internships done</p>
+          <div className="reveal delay-200 bento-card flex flex-col justify-center items-center text-center p-4 min-h-[120px]">
+            <span className="text-2xl font-display font-bold text-foreground">2</span>
+            <p className="text-muted-foreground text-xs mt-1">Internships Done</p>
           </div>
         </div>
       </div>
