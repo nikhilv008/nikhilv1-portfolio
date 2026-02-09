@@ -30,17 +30,16 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-12">
           {/* Left side - Name */}
           <div className="reveal">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold leading-[0.9] tracking-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold leading-[0.9] tracking-tight">
               Nikhil V
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mt-4">
+            <p className="text-xl md:text-2xl font-display font-medium text-muted-foreground mt-4">
               Web Developer
             </p>
           </div>
 
           {/* Right side - Introduction */}
           <div className="reveal delay-200 lg:pt-8">
-            <span className="section-label">Introduction</span>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
               I'm a web developer specializing in modern website design and full-stack web applications. I build responsive, high-performance websites that help businesses grow and establish a strong digital presence.
             </p>
